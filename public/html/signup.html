@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <style>
+        div{
+            margin: 10px;
+        }
+        form{
+            margin: auto;
+            width: fit-content;
+            border: 3px solid red;
+            border-radius: 2px;
+            padding: 10px;
+        }  
+        a:hover {
+            color: green;
+        }
+        
+        a {
+            text-decoration: none;
+            margin-left: 20px;
+        } 
+        
+        h1 {
+          color: maroon;
+          margin-left: 40px;
+        }
+        </style>
+</head>
+<body>
+    <form method="post" action="/signup" enctype="multipart/form-data">
+        <div class="d">Create User Name : <input type="text" placeholder="username" name="username" id="username" /></div>
+        <div class="d">Create User Id : <input type="text" placeholder="userid" name="userid" id="userid" /></div>
+
+        <div class="d">Create Password : <input placeholder="password" type="password" name="password"id="password" /></div>
+        <div class="d">Upload Photo : <input  type="file" name="profilePic" accept="image/*"/ /></div>
+    
+    
+        <h2 style="background: red;" id="error"></h2>
+        <button id="login" type="submit">SignUp</button>
+    
+        <a href="/login">Login</a>
+
+
+
+    </form>
+</body>
+</html>

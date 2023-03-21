@@ -1,0 +1,28 @@
+#signuppage {
+    margin: auto;
+    width: fit-content;
+    border: 3px solid red;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+#loginpage {
+    margin: auto;
+    width: fit-content;
+    border: 3px solid red;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+a:hover {
+    color: green;
+}
+
+a {
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.d {
+    margin: 8px;
+}

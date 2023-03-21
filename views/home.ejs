@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="/css/style.css"/>
+<style>
+    b{
+        color: rgb(51 0 255);
+    }
+</style>
+<header>
+     <div>
+       <h1>Welcome <b><%= username %></b> </h1>
+    </div>
+    <div>
+        <img style="padding: 0;border-radius: 10px;width: 40px;height: 40px;" src="<%= user.profile_pic %>"/>
+    </div>
+     <div id="lg" >
+        <h2><a id="logout" href="/logout">logout</a></h2>
+    </div>
+    
+</header>
+
+
+
+<h2> Task Form</h2>
+<form action="/todo" method="post" enctype="multipart/form-data"> 
+   <div><input placeholder="enter something" name="text" id="ip"/></div>
+    <div><input type="file" name="todoPic" accept="image/*"/></div>
+   <div><input type="submit" value="save" id="addtodo"/></div>
+</form>
+
+<h2> Task Lists</h2>
+<div id="parent">
+  <% data.forEach(function(todo){ %>
+ 
+  <form action="/delete" method="post" id="f<%= data.indexOf(todo) %>">
+      <div class="formdiv">  
+    
+            <p> <%= todo.text %> </p>
+        
+        <div >
+            <img  id="im"  src= "<%= todo.pic %>" >
+        </div>
+    
+           <button type="submit" class="button" id="butt" form="f<%= data.indexOf(todo) %>" name="index" value="<%= data.indexOf(todo) %>">X</button>
+    
+        </div>    
+
+   </form>
+      
+  
+       
+  <% }) %>
+</div>
+
+<script src="/js/Script.js"></script>
+
+
